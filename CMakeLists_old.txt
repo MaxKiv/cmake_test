@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.16.3)
+
+# set project name
+project(cmake_tutorial)
+
+# add executable
+add_executable(main main.cpp)
+
+# add lib
+add_subdirectory(libtimon)
+
+# link to exe
+target_link_libraries(main PUBLIC libtimon)
+
+# add the binary tree to the search path for include files
+# so that we will find TutorialConfig.h
+target_include_directories(main PUBLIC
+                          "${PROJECT_BINARY_DIR}"
+                          "${PROJECT_SOURCE_DIR}/libtimon"
+                          )

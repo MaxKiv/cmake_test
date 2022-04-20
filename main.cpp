@@ -1,8 +1,13 @@
 #include <iostream>
+#include <vector>
+#ifdef USE_LIBTIMON
+#	include "libtimon.h"
+#endif
+
+void bigBoi(const int&);
 
 int main(int argc, char* argv[]) {
-	for(size_t i = 0; i < argc; i++) {
-		std::cout << "argv[i]: " << argv[i] << std::endl;
-	}
-	return 0;
+	std::cout << "entry of main" << std::endl;
+	bigBoi(12309);
+    return 0;
 }
