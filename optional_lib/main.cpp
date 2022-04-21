@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+
 #ifdef USE_LIBTIMON
 #	include "libtimon.h"
 #endif
