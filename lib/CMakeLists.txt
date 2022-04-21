@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16.3)
+
+project(lib)
+
+add_executable(main main.cpp)
+
+SET(GCC_COVERAGE_COMPILE_FLAGS "-Wall -pedantic")
+SET(GCC_COVERAGE_LINK_FLAGS    "-v")
+
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
+SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}")
+
+set_property(TARGET main PROPERTY CXX_STANDARD 17)
