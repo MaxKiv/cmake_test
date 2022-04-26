@@ -9,7 +9,7 @@
 template <typename T>
 void printVector (std::vector<T>& vector) {
     for(const auto& el: vector) {
-        std::cout << el << "";
+        std::cout << "{" << el << "} ";
     }
     std::cout << std::endl;
 }
@@ -29,9 +29,11 @@ int main() {
     std::string out2 = std::accumulate(std::begin(Map2), std::end(Map2), init, [](std::string out, std::map<unsigned short, std::string>::value_type& entry){return out + std::to_string(entry.first) + " " + entry.second + " ";});
     std::cout << out2;
 
-    std::vector<std::string> inputVector{"a","b","c"};
+    std::vector<std::string> inputVector{"a","b","c","d"};
     std::cout << "POWER set:\n";
+    printVector(inputVector);
     std::vector<std::string> out3 = powerSet(inputVector);
+    std::cout << "result:\n";
     printVector(out3);
 
     return 0;

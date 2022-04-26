@@ -1,5 +1,5 @@
-#include <vector>
 #include <cmath>
+#include <vector>
 // calculate power set of input vector
 template <typename T>
 std::vector<T> powerSet(std::vector<T>& inputVector) {
@@ -8,14 +8,14 @@ std::vector<T> powerSet(std::vector<T>& inputVector) {
     // str[010]
     // str[011]
     std::vector<T> out;
-    for (size_t i = 0; i < std::pow(2,inputVector.size()); i++) {
-        {
-            for(size_t bitIdx = 1; bitIdx < inputVector.size(); bitIdx++) {
-                auto out = i<<bitIdx;
-                std::cout << " i << bitIdx " << out << std::endl;
+    for (size_t i = 0; i < std::pow(2, inputVector.size()); i++) {
+        T el;
+        for (size_t bitIdx = 0; bitIdx < inputVector.size(); bitIdx++) {
+            if((i >> bitIdx) & 1) {
+                el += inputVector[bitIdx];
             }
-            std::cout << std::endl;
         }
+        out.push_back(el);
     }
     return out;
 }
