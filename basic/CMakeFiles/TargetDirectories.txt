@@ -1,0 +1,3 @@
+/home/max/projects/cpp/cmake_test/basic/CMakeFiles/rebuild_cache.dir
+/home/max/projects/cpp/cmake_test/basic/CMakeFiles/edit_cache.dir
+/home/max/projects/cpp/cmake_test/basic/CMakeFiles/main.dir
