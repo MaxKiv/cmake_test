@@ -1,5 +1,4 @@
+#pragma once
+#include "libcollatz.cpp"
 
-
-double update(double& in) {
-    if()
-}
+int update(int&);

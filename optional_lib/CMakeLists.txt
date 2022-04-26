@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16.3)
 
-project(libcollatz)
+project(optional_lib)
 
 # include_directories(${CMAKE_SOURCE_DIR}/inc)
-# link_directories(${CMAKE_SOURCE_DIR}/lib)
+# link_directories(libcollatz)
 add_subdirectory(libcollatz)
 
 add_executable(main main.cpp)
@@ -11,7 +11,7 @@ add_executable(main main.cpp)
 target_link_libraries(main PUBLIC libcollatz) # libbar.so is found in ${CMAKE_SOURCE_DIR}/lib
 target_include_directories(main PUBLIC
                             "${PROJECT_BINARY_DIR}"
-                            "${PROJECT_SOURCE_DIR}/libpower"
+                            "${PROJECT_SOURCE_DIR}/libcollatz"
                           )
 
 SET(GCC_COVERAGE_COMPILE_FLAGS "-Wall -pedantic")
