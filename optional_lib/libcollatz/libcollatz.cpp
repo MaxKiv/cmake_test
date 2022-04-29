@@ -1,4 +1,3 @@
-#include "libcollatz.h"
 
 int update(int& in) {
     if (in % 2 == 0) {
