@@ -1,0 +1,24 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "CMake build & make project",
+            "command": "/usr/bin/bash",
+            "args": [
+                "./build.sh",
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Use CMake to build the current project"
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -35,7 +35,7 @@ target_include_directories(main PUBLIC
                           )
 
 # set compiler flags
-SET(GCC_COVERAGE_COMPILE_FLAGS "-Wall -pedantic")
+SET(GCC_COVERAGE_COMPILE_FLAGS "-Wall -pedantic -g")
 SET(GCC_COVERAGE_LINK_FLAGS    "-v")
 
 # add compiler flags
