@@ -52,15 +52,15 @@ install(TARGETS main DESTINATION bin)
 enable_testing()
 
 # does the application run?
-add_test(NAME Runs COMMAND main)
+add_test(NAME Runs COMMAND main 4 1)
 
 # define a function to simplify adding tests - end to end test
-function (do_test target arg result)
-  add_test(NAME Comp${arg} COMMAND ${target} ${arg})
-  set_tests_properties(Comp${arg}
+function (do_test target init iter result)
+  add_test(NAME Comp${init} COMMAND ${target} ${init} ${iter})
+  set_tests_properties(Comp${init}
     PROPERTIES PASS_REGULAR_EXPRESSION ${result}
   )
 endfunction()
 
 # do tests
-# do_test(main )
+do_test(main 4 1 "2")
