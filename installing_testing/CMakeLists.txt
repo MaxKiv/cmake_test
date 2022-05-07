@@ -16,7 +16,6 @@ if(USE_COLLATZ)
   # if use: add subdir, append lib to list of libs/includes to use below
   add_subdirectory(libcollatz)
   list(APPEND EXTRA_LIBS libcollatz)
-  list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/libcollatz")
 
   # lib properties
   set_target_properties(libcollatz PROPERTIES LINKER_LANGUAGE CXX)
@@ -31,7 +30,6 @@ target_link_libraries(main PUBLIC ${EXTRA_LIBS}) # libbar.so is found in ${CMAKE
 # add the binary tree to the search path for include files so that we will find ilbCollatzConfig.h
 target_include_directories(main PUBLIC
                             "${PROJECT_BINARY_DIR}"
-                            "${EXTRA_INCLUDES}"
                           )
 
 # set compiler flags
