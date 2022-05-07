@@ -46,7 +46,7 @@ set_property(TARGET main PROPERTY CXX_STANDARD 17)
 
 # installation
 install(TARGETS main DESTINATION bin)
-install(FILES "${PROJECT_BINARY_DIR}/stage/include/libcollatz.h" DESTINATION include)
+# install(FILES "${PROJECT_SOURCE_DIR}/libcollatz/libcollatz.h" DESTINATION include)
 
 # Testing!
 enable_testing()
@@ -55,4 +55,12 @@ enable_testing()
 add_test(NAME Runs COMMAND main)
 
 # define a function to simplify adding tests - end to end test
-# function (do_test target arg result)
+function (do_test target arg result)
+  add_test(NAME Comp${arg} COMMAND ${target} ${arg})
+  set_tests_properties(Comp${arg}
+    PROPERTIES PASS_REGULAR_EXPRESSION ${result}
+  )
+endfunction()
+
+# do tests
+# do_test(main )
