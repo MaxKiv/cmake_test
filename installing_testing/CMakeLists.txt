@@ -2,8 +2,12 @@ cmake_minimum_required(VERSION 3.16.3)
 
 project(optional_lib)
 
+# specify main executable
+add_executable(main main.cpp)
+
 # Make libCollatz optional
 option(USE_COLLATZ "Use the Collatz lib" ON)
+set(CMAKE_INSTALL_PREFIX "./build/stage")
 
 # configure a header file to pass some of the CMake settings to the source code
 configure_file(libCollatzConfig.h.in libCollatzConfig.h)
@@ -20,9 +24,6 @@ if(USE_COLLATZ)
   # lib properties
   set_target_properties(libcollatz PROPERTIES LINKER_LANGUAGE CXX)
 endif()
-
-# specify main executable
-add_executable(main main.cpp)
 
 # link to optional libs
 target_link_libraries(main PUBLIC ${EXTRA_LIBS}) # libbar.so is found in ${CMAKE_SOURCE_DIR}/lib
@@ -42,3 +43,7 @@ SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS
 
 # properties
 set_property(TARGET main PROPERTY CXX_STANDARD 17)
+
+# installation
+install(TARGETS main DESTINATION bin)
+install(FILES "${PROJECT_BINARY_DIR}/libcollatz/libcollatz.h" DESTINATION include)

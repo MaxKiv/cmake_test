@@ -1,0 +1,14 @@
+/home/max/projects/cpp/cmake_test/installing_testing/CMakeFiles/install/strip.dir
+/home/max/projects/cpp/cmake_test/installing_testing/CMakeFiles/install/local.dir
+/home/max/projects/cpp/cmake_test/installing_testing/CMakeFiles/install.dir
+/home/max/projects/cpp/cmake_test/installing_testing/CMakeFiles/list_install_components.dir
+/home/max/projects/cpp/cmake_test/installing_testing/CMakeFiles/rebuild_cache.dir
+/home/max/projects/cpp/cmake_test/installing_testing/CMakeFiles/edit_cache.dir
+/home/max/projects/cpp/cmake_test/installing_testing/CMakeFiles/main.dir
+/home/max/projects/cpp/cmake_test/installing_testing/libcollatz/CMakeFiles/install/strip.dir
+/home/max/projects/cpp/cmake_test/installing_testing/libcollatz/CMakeFiles/install/local.dir
+/home/max/projects/cpp/cmake_test/installing_testing/libcollatz/CMakeFiles/install.dir
+/home/max/projects/cpp/cmake_test/installing_testing/libcollatz/CMakeFiles/list_install_components.dir
+/home/max/projects/cpp/cmake_test/installing_testing/libcollatz/CMakeFiles/rebuild_cache.dir
+/home/max/projects/cpp/cmake_test/installing_testing/libcollatz/CMakeFiles/edit_cache.dir
+/home/max/projects/cpp/cmake_test/installing_testing/libcollatz/CMakeFiles/libcollatz.dir

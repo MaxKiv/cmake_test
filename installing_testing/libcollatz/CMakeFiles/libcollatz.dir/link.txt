@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibcollatz.a  
+/usr/bin/ranlib liblibcollatz.a

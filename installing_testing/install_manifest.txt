@@ -1,0 +1,4 @@
+/home/max/projects/cpp/cmake_test/installing_testing/./build/stage/lib/liblibcollatz.a
+/home/max/projects/cpp/cmake_test/installing_testing/./build/stage/include/libcollatz.h
+/home/max/projects/cpp/cmake_test/installing_testing/./build/stage/bin/main
+/home/max/projects/cpp/cmake_test/installing_testing/./build/stage/include/libcollatz.h
